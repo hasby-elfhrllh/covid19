@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="main">
+    <div class="main-content">
 <div class="row" style="text-align: center">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -45,5 +47,7 @@
       
 
     </div>
+  </div>
+</div>
 @endsection
 

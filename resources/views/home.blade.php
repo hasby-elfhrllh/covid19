@@ -1,22 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="main">
+    <div class="main-content">
 <div class="row justify-content-center">
 <div class="col-md-8">
     <div class="card shadow-sm border-0">
-        <div class="card-header">Survey</div>
+        
 
         <div class="card-body">
             <div class="table-responsive">
             <form action="{{ route('survey.store') }}" method="POST">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                <input type="hidden" name="id" value="{{Auth::user()->id}}"> 
-               <table class="table table-bordered table-hover" id="datatables">
-                    <thead>
+               <table class="table table-hover" id="datatables">
+                    <thead align="center">
                         <tr>
                             <th width="1">No</th>
                             <th>Kegiatan</th>
-                            <th width="5%">Ya/Tidak</th>
+                            <th width="15%">Ya/Tidak</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,9 +28,9 @@
                            <td>
                             <div style="display:inline-block">
                             <input type="radio" id="q1" name="y1" value="1">
-                            <label for="y1">Ya</label><br>
+                            <label for="y1">Ya</label>
                             <input type="radio" id="q1" name="y1" value="0">
-                            <label for="n1">Tidak</label><br>
+                            <label for="n1">Tidak</label>   
                             </div>
                            </td>
                        </tr>
@@ -38,9 +40,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q2" name="y2" value="1">
-                         <label for="y2">Ya</label><br>
+                         <label for="y2">Ya</label>
                          <input type="radio" id="q2" name="y2" value="0">
-                         <label for="n2">Tidak</label><br>
+                         <label for="n2">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -50,9 +52,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q3" name="y3" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q3" name="y3" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -62,9 +64,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q4" name="y4" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q4" name="y4" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -74,9 +76,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q5" name="y5" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q5" name="y5" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -86,9 +88,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q6" name="y6" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q6" name="y6" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -98,9 +100,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q7" name="y7" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q7" name="y7" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -110,9 +112,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q8" name="y8" value="1">
-                         <label for="y8">Ya</label><br>
+                         <label for="y8">Ya</label>
                          <input type="radio" id="q8" name="y8" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -122,9 +124,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q9" name="y9" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q9" name="y9" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -134,9 +136,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q10" name="y10" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q10" name="y10" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -146,9 +148,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q11" name="y11" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q11" name="y11" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -158,9 +160,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q12" name="y12" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q12" name="y12" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -170,9 +172,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q13" name="y13" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q13" name="y13" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -182,9 +184,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q14" name="y14" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q14" name="y14" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -194,9 +196,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q15" name="y15" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q15" name="y15" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -206,9 +208,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q16" name="y16" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q16" name="y16" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -218,9 +220,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q17" name="y17" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q17" name="y17" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -230,9 +232,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q18" name="y18" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q18" name="y18" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -242,9 +244,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q19" name="y19" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q19" name="y19" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -254,9 +256,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q20" name="y20" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q20" name="y20" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -266,9 +268,9 @@
                         <td>
                          <div style="display:inline-block">
                          <input type="radio" id="q21" name="y21" value="1">
-                         <label for="y3">Ya</label><br>
+                         <label for="y3">Ya</label>
                          <input type="radio" id="q21" name="y21" value="0">
-                         <label for="n3">Tidak</label><br>
+                         <label for="n3">Tidak</label>
                          </div>
                         </td>
                     </tr>
@@ -279,6 +281,8 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 </div>
 @endsection
